@@ -61,7 +61,10 @@ app.use(bodyParser.json());
 const db = new Pool({
   connectionString:
     "postgresql://neondb_owner:npg_viSdNynIYA93@ep-withered-feather-agaqdodr-pooler.c-2.eu-central-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require",
-
+  ssl: {
+    rejectUnauthorized: false,
+  },
+});
 // Test DB connection
 db.connect()
   .then(() => console.log("Connected to Neon database"))
