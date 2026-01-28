@@ -46,9 +46,9 @@ if (process.env.VAPID_PUBLIC_KEY && process.env.VAPID_PRIVATE_KEY) {
 app.use(
   cors({
     origin: [
-      "https://tour-tracker-client.vercel.app",
+      "https://tour-tracker-friends-client.vercel.app",
       "http://localhost:5173",
-      "https://tour-tracker-server.onrender.com",
+      "https://tour-tracker-friends-server.onrender.com",
       "null",
     ],
     credentials: true,
